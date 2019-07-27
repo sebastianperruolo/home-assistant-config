@@ -1,5 +1,6 @@
 <h1 align="center">
-  🏠<br/>Home Assistant configuration for a smart-looking place!<br/> <sup><sub>by <a href="https://renemarc.com/">René-Marc Simard</a> 😃</sub></sup>
+  🏠<br/>Starter Home Assistant configuration for a smart-looking place!<br/>
+  <sup><sub>This is a fork of <a href="https://github.com/renemarc/home-assistant-config">René-Marc Simard repo</a></sub></sup>
 </h1>
 
 [![Price][img-price]][link-license]
@@ -9,6 +10,24 @@
 [![GitHub Release][img-release]][link-release]
 [![Build Status][img-travis-ci]][link-travis-ci]
 [![Tweet][img-twitter]][link-twitter]
+
+### Usage 📘
+
+In an empty directory, type:
+
+```shell
+git clone --recurse-submodules git@github.com:sebastianperruolo/home-assistant-config.git .
+
+echo "secrets.yaml filter=secret merge=keepMine" > .gitattributes
+
+cp secrets-dummy.yaml secrets.yaml
+
+cp appdaemon/secrets-dummy.yaml appdaemon/secrets.yaml
+```
+
+Actual secrets and auto-generated sensitive files are obviously kept off this repo! 😉
+
+<p align="right"><a href="#top" title="Back to top">🔝</a></p>
 
 Configuration for [Home Assistant](https://home-assistant.io/) running [Hass.io](https://home-assistant.io/hassio/) on a [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) for a one bedroom apartment, offering convenience automations over lights and climate while providing multiple intuitive user controls.
 
@@ -383,24 +402,6 @@ Tasks are defined in the [issue queue][link-issues] and the development progress
 - **[Raspberry Pi power sensor](https://github.com/custom-components/sensor.rpi_power)** to warn in case of insufficient power supply.
 - **[Text-only state card](https://community.home-assistant.io/t/display-only-text-in-card/20536)** for wordy sensor states.
 - **[Variable component](https://github.com/rogro82/hass-variables)** for non-boolean values.
-
-<p align="right"><a href="#top" title="Back to top">🔝</a></p>
-
-### Usage 📘
-
-In an empty directory, type:
-
-```shell
-git clone --recurse-submodules git@github.com:renemarc/home-assistant-config.git .
-
-echo "secrets.yaml filter=secret merge=keepMine" > .gitattributes
-
-cp secrets-dummy.yaml secrets.yaml
-
-cp appdaemon/secrets-dummy.yaml appdaemon/secrets.yaml
-```
-
-Actual secrets and auto-generated sensitive files are obviously kept off this repo! 😉
 
 <p align="right"><a href="#top" title="Back to top">🔝</a></p>
 
